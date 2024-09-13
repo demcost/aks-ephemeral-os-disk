@@ -283,7 +283,7 @@ and `kubeletDiskType` for each node pool of an existing AKS cluster:
 az aks show \
   --name myAksCluster \
   --resource-group myResourceGroup \
-  --query 'agentPoolProfiles\[\].{name:name,osDiskType:osDiskType,kubeletDiskType:kubeletDiskType}' \
+  --query 'agentPoolProfiles[].{name:name,osDiskType:osDiskType,kubeletDiskType:kubeletDiskType}' \
   --output table \
   --only-show-errors
 ```
